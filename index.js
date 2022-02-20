@@ -4,9 +4,9 @@ let callfunction=function(city){
     fetch(url).then((reponse)=>reponse.json().then((data)=>{
         console.log(data);
     document.querySelector("#city").innerHTML =data.name;
-    document.querySelector("#temp").innerHTML ="<i class='fa-solid fa-temperature-half'></i>"+data.main.temp+'°';
-    document.querySelector("#humidity").innerHTML ="<i class='fa-solid fa-droplet'></i>"+data.main.humidity+'%';
-    document.querySelector("#wind").innerHTML ="<i class='fa-solid fa-wind'></i> "+data.wind.speed+'km/h';
+    document.querySelector("#temp").innerHTML ="<i class='fas fa-thermometer-half'></i>"+data.main.temp+'°';
+    document.querySelector("#humidity").innerHTML ="<i class='fas fa-tint'></i>"+data.main.humidity+'%';
+    document.querySelector("#wind").innerHTML ="<i class='fas fa-wind'></i>  "+data.wind.speed+'km/h';
     })).catch((err)=>console.log("Error: ",+err));
 };
 //ecouteur de d'evenement sur la soulution de la formulaire
